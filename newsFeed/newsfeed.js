@@ -106,8 +106,12 @@ newsDiv.appendChild(tickerWrap)
 
 
 // Append the whole shabang
-mainPage.appendChild(newsDiv)
-
+const buildNewsFeed = () => {
+  while (mainPage.firstChild){
+    mainPage.removeChild(mainPage.firstChild)
+}
+  mainPage.appendChild(newsDiv)
+}
 // Button opening
 const coll = document.getElementsByClassName("news-collapsible");
 

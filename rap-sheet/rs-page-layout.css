@@ -1,28 +1,4 @@
-*{
-  box-sizing: border-box;
-}
-/*----------------############# Tag Selectors ----------------#############*/
-
-body {
-  margin: 20px;
-}
-
 /*----------------############# Class Selectors ----------------#############*/
-
-.main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.malone {
-  width: 800px;
-  height: 565px;
-  border-top: 16px solid black; 
-  border-bottom: 16px solid black;
-  
-}
-
 .shadow-box {
   box-shadow: 5px 5px 4px grey;
   border: 1.5px solid grey;
