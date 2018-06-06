@@ -1,10 +1,36 @@
 const centralDiv = document.getElementById("whole-page")
 const centralFragment = document.createDocumentFragment()
 
+const executiveDiv = document.createElement("div")
+executiveDiv.setAttribute("id", "executiveReport")
+executiveDiv.setAttribute("class", "tabcontent")
+centralFragment.appendChild(executiveDiv)
+
+const createSummaryDiv = () => {
+    const summaryContainerDiv = document.createElement("div")
+    summaryContainerDiv.className = "summary-container-div"
+    executiveDiv.appendChild(summaryContainerDiv)
+
+    const summaryDiv = document.createElement("div")
+    summaryContainerDiv.appendChild(summaryDiv)
+
+    const summaryHeadline = document.createElement("h1")
+    summaryHeadline.innerHTML = "The Joker"
+    summaryDiv.appendChild(summaryHeadline)
+
+    const img = document.createElement("img");
+    img.src = "https://upload.wikimedia.org/wikipedia/en/9/98/Joker_%28DC_Comics_character%29.jpg";
+    summaryDiv.appendChild(img);
+
+    executiveDiv.appendChild(summaryContainerDiv)
+}
+createSummaryDiv()
+
+
 const createAliasesDiv = () => {
    const aliasesContainerDiv = document.createElement("div")
    aliasesContainerDiv.className = "aliases-container-div"
-   centralFragment.appendChild(aliasesContainerDiv)
+   executiveDiv.appendChild(aliasesContainerDiv)
 
    const aliasesDiv = document.createElement("div")
    aliasesContainerDiv.appendChild(aliasesDiv)
@@ -22,18 +48,58 @@ const createAliasesDiv = () => {
        aliasesUL.appendChild(li)
    }
 
-   centralFragment.appendChild(aliasesContainerDiv)
+   executiveDiv.appendChild(aliasesContainerDiv)
 }
 createAliasesDiv()
 
 const createAssociatesDiv = () => {
     const associatesContainerDiv = document.createElement("div")
     associatesContainerDiv.className = "associates-container-div"
-    centralFragment.appendChild(associatesContainerDiv)
+    executiveDiv.appendChild(associatesContainerDiv)
 
     const associatesDiv = document.createElement("div")
-    
+    associatesContainerDiv.appendChild(associatesDiv)
+
+    const associatesHeadline = document.createElement("h2")
+    associatesHeadline.innerHTML = "Known Associates"
+    associatesDiv.appendChild(associatesHeadline)
+
+    const associatesList = ["Harvey Dent", "Oswald Cobblepot", "Pamela Isley"]
+    const associatesUL = document.createElement("ul")
+    associatesDiv.appendChild(associatesUL)
+    for (let name2 in associatesList) {
+        let li2 = document.createElement("li")
+        li2.innerHTML = associatesList[name2]
+        associatesUL.appendChild(li2)
+    }
+    executiveDiv.appendChild(associatesContainerDiv)
 }
+
+createAssociatesDiv()
+
+const createPlaceDiv = () => {
+    const placeContainerDiv = document.createElement("div")
+    placeContainerDiv.className = "place-container-div"
+    executiveDiv.appendChild(placeContainerDiv)
+
+    const placeDiv = document.createElement("div")
+    placeContainerDiv.appendChild(placeDiv)
+
+    const placeHeadline = document.createElement("h2")
+    placeHeadline.innerHTML = "Country of Origin"
+    placeDiv.appendChild(placeHeadline)
+
+    const placeName = ["USA"]
+    const placeUL = document.createElement("ul")
+    placeDiv.appendChild(placeUL)
+    for (let name3 in placeName) {
+        let li3 = document.createElement("li")
+        li3.innerHTML = placeName[name3]
+        placeUL.appendChild(li3)
+    }
+    executiveDiv.appendChild(placeContainerDiv)
+}
+createPlaceDiv()
 
 
 centralDiv.appendChild(centralFragment)
