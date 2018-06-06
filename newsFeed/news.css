@@ -34,7 +34,7 @@
     overflow: hidden;
     height: 4rem;
     background-color: rgba(0, 0, 0, 0.9);
-    padding-left: 100%;
+    /* padding-left: 100%; */
     box-sizing: content-box;
   }
   .ticker-wrap .ticker {
@@ -59,12 +59,12 @@
     font-size: 2rem;
     color: white;
   }
-  body {
+  /* body {
     padding-bottom: 5rem;
   }
   h1, h2, p {
     padding: 0 5%;
-  }
+  } */
 
   .news-collapsible {
     background-color: #777;
