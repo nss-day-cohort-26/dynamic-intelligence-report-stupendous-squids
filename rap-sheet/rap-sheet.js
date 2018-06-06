@@ -69,8 +69,10 @@ const createLocationsDiv = () => {
         locationsUL.appendChild(locationsLiDiv)
     }
     const locationsArray = ["Bang Kwang Central Prison, Thailand","Washington State Pennetentiary, USA","Topo Chico, Mexico"]
-    const imagesArray = ["../rs-images/bang_kwan_central.png","../rs-images/washing_state_penn.png","../rs-images/topo-chico.png"]
+    const imagesArray = ["rap-sheet/images/bang_kwan_central.png","rap-sheet/images/washing_state_penn.png","rap-sheet/images/topo-chico.png"]
     const imageLinksArray = ["https://goo.gl/maps/AZzyRAU3UZ52","https://goo.gl/maps/1DTYdXDggSt","https://goo.gl/maps/zk4yQGXPBq72"]
+    const convictionsArray = ["Conviction: Maple Syrup Laundering","Conviction: Grand Theft Auto","Conviction: Murder"]
+    const IncarcerationDatesArray = ["Entered: 01/1987 ~ Released under mysterious circumstance 07/1995","Entered: 03/2010 ~ Released: 05/2011","Entered: 11/2011 ~ escaped: 05/2012"]
     for (let i=0; i<locationsUL.childNodes.length; i++){
         const locationsLi = document.createElement("li")
         const locationsPic = document.createElement("img")
@@ -80,8 +82,22 @@ const createLocationsDiv = () => {
         locationsLink.setAttribute("target", "_blank")
         const locationsInnerHeadline = document.createElement("h3")
         locationsInnerHeadline.innerHTML = `${locationsArray[i]}`
+        const locationsNestedUL = document.createElement("ul")
+        locationsUL.childNodes[i].appendChild(locationsNestedUL)
+        const locationsNestedLI1 = document.createElement("li")
+        locationsNestedLI1.innerHTML = convictionsArray[i]
+        const locationsNestedLI2 = document.createElement("li")
+        locationsNestedLI2.innerHTML = IncarcerationDatesArray[i]
         locationsUL.childNodes[i].appendChild(locationsLi).appendChild(locationsInnerHeadline)
         locationsUL.childNodes[i].appendChild(locationsLink).appendChild(locationsPic)
+        locationsUL.childNodes[i].appendChild(locationsNestedUL).appendChild(locationsNestedLI1)
+        locationsUL.childNodes[i].appendChild(locationsNestedUL).appendChild(locationsNestedLI2)
+
+    //     for (let i=0; i<convictionsArray.length; i++) {
+    //         const locationsNestedLI = document.createElement("li")
+    //         locationsNestedLI.innerHTML = convictionsArray[i]
+    //         locationsUL.childNodes[i].lastChild.appendChild(locationsNestedLI)
+    //     }
     }
 
 }
@@ -90,4 +106,3 @@ createCrimesDiv()
 createLocationsDiv()
 
 mainDiv.appendChild(mainFragment)
-
