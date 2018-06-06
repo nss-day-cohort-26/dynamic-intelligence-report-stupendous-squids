@@ -1,16 +1,6 @@
 const mainDiv = document.getElementById("whole-page")
 const mainFragment = document.createDocumentFragment()
 
-// const createUL = (arrayList, nameOfUl, varToAppendTo) => {
-//     nameOfUl = document.createElement("ul")
-//     varToAppendTo.appendChild(nameOfUl)
-//     for (let taco in arrayList) {
-//         let li = document.createElement("li")
-//         li.innerHTML = arrayList[taco]
-//         nameOfUl.appendChild(li)
-//     }
-// }
-
 const createCrimesDiv = () => {
     const crimesContainerDiv = document.createElement("div")
     crimesContainerDiv.className = "crimes-container-div"
