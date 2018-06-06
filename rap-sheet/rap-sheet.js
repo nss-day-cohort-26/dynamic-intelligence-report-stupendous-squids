@@ -102,7 +102,46 @@ const createLocationsDiv = () => {
 
 }
 
+const createWitVicDiv = () => {
+    const witVicContainerDiv = document.createElement("div")
+    witVicContainerDiv.className = "witness-victim-container"
+    mainFragment.appendChild(witVicContainerDiv)
+
+    const witnessDiv = document.createElement("div")
+    witVicContainerDiv.appendChild(witnessDiv)
+    
+    const witnessHeadline = document.createElement("h2")
+    witnessHeadline.innerHTML = "Witnesses To Crimes"
+    witnessDiv.appendChild(witnessHeadline)
+
+    const witnessList = ["Samantha Vo - Witness to Maple Syrup Laundering","Travers - Witness to Armed Robbery","Siddarth Best - Witness to Hit and Run","Henry Fairclaw - Witness to Murder"]
+    const witnessUL = document.createElement("ul")
+    witnessDiv.appendChild(witnessUL)
+    for (let crime in witnessList) {
+        let li = document.createElement("li")
+        li.innerHTML = witnessList[crime]
+        witnessUL.appendChild(li)
+    }
+
+    const victimDiv = document.createElement("div")
+    witVicContainerDiv.appendChild(victimDiv)
+    
+    const victimHeadline = document.createElement("h2")
+    victimHeadline.innerHTML = "Witnesses To Crimes"
+    victimDiv.appendChild(victimHeadline)
+
+    const victimList = ["Samantha Vo - Witness to Maple Syrup Laundering","Travers - Witness to Armed Robbery","Siddarth Best - Witness to Hit and Run","Henry Fairclaw - Witness to Murder"]
+    const victimeUL = document.createElement("ul")
+    victimDiv.appendChild(victimeUL)
+    for (let crime in victimList) {
+        let li = document.createElement("li")
+        li.innerHTML = victimList[crime]
+        victimeUL.appendChild(li)
+    }
+}
+
 createCrimesDiv()
 createLocationsDiv()
+createWitVicDiv()
 
 mainDiv.appendChild(mainFragment)
