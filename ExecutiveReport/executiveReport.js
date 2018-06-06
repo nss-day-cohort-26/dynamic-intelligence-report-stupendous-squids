@@ -24,7 +24,7 @@ const createSummaryDiv = () => {
 
     executiveDiv.appendChild(summaryContainerDiv)
 }
-createSummaryDiv()
+
 
 
 const createAliasesDiv = () => {
@@ -50,7 +50,7 @@ const createAliasesDiv = () => {
 
    executiveDiv.appendChild(aliasesContainerDiv)
 }
-createAliasesDiv()
+
 
 const createAssociatesDiv = () => {
     const associatesContainerDiv = document.createElement("div")
@@ -75,7 +75,7 @@ const createAssociatesDiv = () => {
     executiveDiv.appendChild(associatesContainerDiv)
 }
 
-createAssociatesDiv()
+
 
 const createPlaceDiv = () => {
     const placeContainerDiv = document.createElement("div")
@@ -99,8 +99,19 @@ const createPlaceDiv = () => {
     }
     executiveDiv.appendChild(placeContainerDiv)
 }
-createPlaceDiv()
 
 
-centralDiv.appendChild(centralFragment)
+
+// centralDiv.appendChild(centralFragment)
+
+const buildExecSum = () => {
+    while (centralDiv.firstChild){
+        centralDiv.removeChild(centralDiv.firstChild)
+    }
+    createSummaryDiv()
+    createAliasesDiv()
+    createAssociatesDiv()
+    createPlaceDiv()
+    centralDiv.appendChild(centralFragment)
+}
 
