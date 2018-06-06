@@ -130,8 +130,13 @@ const createWitVicDiv = () => {
     }
 }
 
-createCrimesDiv()
-createLocationsDiv()
-createWitVicDiv()
+const buildRapSheet = () => {
+    while (mainDiv.firstChild){
+        mainDiv.removeChild(mainDiv.firstChild)
+    }
+    createCrimesDiv()
+    createLocationsDiv()
+    createWitVicDiv()
+    mainDiv.appendChild(mainFragment)
+}
 
-mainDiv.appendChild(mainFragment)
