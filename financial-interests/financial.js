@@ -42,7 +42,7 @@ const bankAccountsHeadline = document.createElement("h2")
 bankAccountsHeadline.innerHTML = "Bank Accounts"
 bankAccountsDiv.appendChild(bankAccountsHeadline)
 
-const bankAccountList = ["Royal Bank of Canada - Account #89034593", "HSBC Canada - Account #05529588", "UBS        Group AG - Account #376408365, "CIM Bank - Account #058988324"]
+const bankAccountList = ["Royal Bank of Canada - Account #89034593", "HSBC Canada - Account #05529588", "UBS        Group AG - Account #376408365, "]
 const bankAccountsListUl = document.createAttribute("ul")
 bankAccountsDiv.appendChild(bankAccountsListUL)
 
@@ -55,6 +55,6 @@ for (let banks in bankAccountList) {
 mainFragment.appendChild(financialsDiv)
 }
 
-createBanksDiv
+createFinancialsDiv()
 mainDiv.appendChild(mainFragment)
 
