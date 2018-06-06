@@ -6,5 +6,5 @@ const finIntBtn = document.getElementById("finInt")
 execSumBtn.addEventListener("click", buildExecSum)
 rapSheetBtn.addEventListener("click", buildRapSheet)
 newsFeedBtn.addEventListener("click", buildNewsFeed)
-// finIntBtn.addEventListener("click", buildFinInt)
+finIntBtn.addEventListener("click", buildFinInt)
 
