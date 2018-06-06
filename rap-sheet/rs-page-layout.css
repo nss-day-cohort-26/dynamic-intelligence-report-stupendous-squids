@@ -1,0 +1,68 @@
+/*----------------############# Class Selectors ----------------#############*/
+.shadow-box {
+  box-shadow: 5px 5px 4px grey;
+  border: 1.5px solid grey;
+  padding: 10px;
+}
+
+.shadow-box ul > li {
+  list-style: inside;
+}
+
+/*----------------############# ID Selectors ----------------#############*/
+
+#crimes-container {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+  margin-top: 40px;
+  border-bottom: 3px dashed black;
+  padding-bottom: 40px;
+}
+
+#crimes-container div > ul {
+  margin: 20px;
+}
+
+#crimes-container ul > li {
+  padding: 10px;
+}
+
+#locations-container {
+  border-bottom: 3px dashed black;
+  padding-bottom: 40px;
+  width: 70%;
+  padding-bottom: 40px;
+}
+
+#locations-container div{
+  margin: 40px;
+}
+
+#locations-container div > li {
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+#locations-container div > li > ul > li {
+  list-style: inside;   
+}
+
+#witness-victim-container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
+
+#witness-victim-container div > ul {
+  margin: 20px
+}
+
+#witness-victim-container ul > li {
+  padding: 10px;
+}

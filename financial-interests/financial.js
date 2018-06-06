@@ -1,10 +1,10 @@
-const mainDiv = document.getElementById("whole-page")
-const mainFragment = document.createDocumentFragment()
+const firstDiv = document.getElementById("whole-page")
+const myFragment = document.createDocumentFragment()
 
 const financialsDiv = () => {
 const financialsContainerDiv = document.createElement("div")
 financialsContainerDiv.className = "financials-div"
-mainFragment.appendChild(financialsContainerDiv)
+myFragment.appendChild(financialsContainerDiv)
 
 const bankAccountsDiv = document.createElement("div")
 financialsContainerDiv.appendChild(bankAccountsDiv)
@@ -79,12 +79,16 @@ for (let moneyLaundering in moneyLaunderingList) {
 
 
 
-mainFragment.appendChild(financialsContainerDiv)
+myFragment.appendChild(financialsContainerDiv)
 
 }
+const buildFinInt = () => {
 
 
+while (firstDiv.firstChild){
+    firstDiv.removeChild(mainDiv.firstChild)
+}
 
 financialsDiv()
-mainDiv.appendChild(mainFragment)
-
+firstDiv.appendChild(myFragment)
+}
