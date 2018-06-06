@@ -51,8 +51,35 @@ const createCrimesDiv = () => {
     mainFragment.appendChild(crimesContainerDiv)
 }
 
+const createLocationsDiv = () => {
+    const locationsDiv = document.createElement("div")
+    locationsDiv.className = "locations-container-div"
+    mainFragment.appendChild(locationsDiv)
+
+    const locationsHeadline = document.createElement("h2")
+    locationsHeadline.innerHTML = "Locations of Incarceration"
+    locationsDiv.appendChild(locationsHeadline)
+
+    const locationsUL = document.createElement("ul")
+    locationsDiv.appendChild(locationsUL)
+
+    for (let i=0; i<3; i++) {
+        const locationsLiDiv = document.createElement("div")
+        locationsLiDiv.className = "shadow-box"
+        locationsUL.appendChild(locationsLiDiv)
+    }
+    const locationsArray = ["Bang Kwang Central Prison, Thailand","Washington State Pennetentiary, USA","Topo Chico, Mexico"]
+    for (let i=0; i<locationsUL.childNodes.length; i++){
+        const locationsLi = document.createElement("li")
+        const locationsInnerHeadline = document.createElement("h3")
+        locationsInnerHeadline.innerHTML = `${locationsArray[i]}`
+        locationsUL.childNodes[i].appendChild(locationsLi).appendChild(locationsInnerHeadline)
+    }
+
+}
 
 createCrimesDiv()
+createLocationsDiv()
 
 mainDiv.appendChild(mainFragment)
 
