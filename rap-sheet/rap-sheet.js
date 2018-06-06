@@ -69,11 +69,19 @@ const createLocationsDiv = () => {
         locationsUL.appendChild(locationsLiDiv)
     }
     const locationsArray = ["Bang Kwang Central Prison, Thailand","Washington State Pennetentiary, USA","Topo Chico, Mexico"]
+    const imagesArray = ["../rs-images/bang_kwan_central.png","../rs-images/washing_state_penn.png","../rs-images/topo-chico.png"]
+    const imageLinksArray = ["https://goo.gl/maps/AZzyRAU3UZ52","https://goo.gl/maps/1DTYdXDggSt","https://goo.gl/maps/zk4yQGXPBq72"]
     for (let i=0; i<locationsUL.childNodes.length; i++){
         const locationsLi = document.createElement("li")
+        const locationsPic = document.createElement("img")
+        locationsPic.setAttribute("src", imagesArray[i])
+        const locationsLink = document.createElement("a")
+        locationsLink.setAttribute("href", imageLinksArray[i])
+        locationsLink.setAttribute("target", "_blank")
         const locationsInnerHeadline = document.createElement("h3")
         locationsInnerHeadline.innerHTML = `${locationsArray[i]}`
         locationsUL.childNodes[i].appendChild(locationsLi).appendChild(locationsInnerHeadline)
+        locationsUL.childNodes[i].appendChild(locationsLink).appendChild(locationsPic)
     }
 
 }
