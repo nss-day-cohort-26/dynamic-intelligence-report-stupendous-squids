@@ -13,7 +13,7 @@ const bankAccountsHeadline = document.createElement("h2")
 bankAccountsHeadline.innerHTML = "Bank Accounts"
 bankAccountsDiv.appendChild(bankAccountsHeadline)
 
-const bankAccountList = ["Gotham Central Bank - Account #89034593", "HSBC New York - Account #05529588", "UBS        Group AG - Account #376408365", "CIM Bank - Account #058988324"]
+const bankAccountList = ["Gotham City Central Bank - Account #89034593", "HSBC New York - Account #05529588", "UBS        Group AG - Account #376408365", "CIM Bank - Account #058988324"]
 const bankAccountsListUl = document.createElement("ul")
 bankAccountsDiv.appendChild(bankAccountsListUl)
 
@@ -48,7 +48,7 @@ const officialsBlackmailedHeadline = document.createElement("h2")
 officialsBlackmailedHeadline.innerHTML = "Officials Blackmailed"
 officialsBlackmailedDiv.appendChild(officialsBlackmailedHeadline)
 
-const officialsBlackmailedList = ["Edward Nigma", "Oswald Chesterfield Cobblepot", "Harvey Dent"]
+const officialsBlackmailedList = ["Alan Wayne", "Theodore Cobblepot", "Edward Elliot", "Harvey Dent"]
 const officialsBlackmailedListUl = document.createElement("ul")
 officialsBlackmailedDiv.appendChild(officialsBlackmailedListUl)
 
@@ -65,7 +65,7 @@ const moneyLaunderingHeadline = document.createElement("h2")
 moneyLaunderingHeadline.innerHTML = "Money-Laundering Businesses"
 moneyLaunderingDiv.appendChild(moneyLaunderingHeadline)
 
-const moneyLaunderingList = ["Red Hood Spirts", "Gotham Auto", "Pointer Real Estate", "Black Glove Nightclub"]
+const moneyLaunderingList = ["Red Hood Spirts", "Gotham City Auto", "Soloman Real Estate", "Black Glove Nightclub"]
 const moneyLaunderingListUl = document.createElement("ul")
 moneyLaunderingDiv.appendChild(moneyLaunderingListUl)
 
