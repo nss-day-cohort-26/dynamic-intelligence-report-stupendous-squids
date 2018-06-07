@@ -6,14 +6,35 @@
     text-align: center;
 }
 
-.aliases-container-div {
-    border: solid;
-}
-
-
 .image {
     border: 5px solid rgb(226, 17, 17);
     border-radius: 4px;
     padding: 5px;
     
 }
+
+.aliases-container-div {
+    border: solid white;
+    padding: 0 5% 0 5%;
+    background: gray;
+    margin-top: 20px;
+    margin: 100px 100px 100px 100px;
+    
+
+}
+
+.associates-container-div {
+    border: solid white;
+    padding: 0 5% 0 5%;
+    background: gray;
+    margin: 0 100px 100px 100px;
+}
+
+.place-container-div {
+    border: solid white;
+    padding: 0 5% 0 5%;
+    background: gray;
+    margin: 0 100px 100px 100px;
+}
+
+
