@@ -5,15 +5,37 @@ const mainDiv = document.getElementById("whole-page")
 // styleLink.setAttribute("rel", "stylesheet")
 const mainFragment = document.createDocumentFragment()
 
-const buildDivAndList = (containerDivName, containerClassName, innerDivName, headlineName, arrayList, listName) => {
-    const containerDivName = document.createElement("div")
-    containerDivName.className = containerClassName
+// const crimesContainerDiv = document.createElement("div")
+// crimesContainerDiv.className = "crimes-container-div"
+
+// const witVicContainerDiv = document.createElement("div")
+// witVicContainerDiv.className = "witness-victim-container"
+
+// const buildContainerDivs = (containerDivName) => {
+//     for (let taco in containers)
+//     containerDivName = document.createElement("div")
+//     containerDivName.className = containerClassName
+//     mainFragment.appendChild(containerDivName)
+// }
+
+const buildDivAndList = (containerDivName, innerDivName, headlineName, headlineContent, arrayList, listName) => {
     mainFragment.appendChild(containerDivName)
 
-    const innerDivName = document.createElement("div")
+    innerDivName = document.createElement("div")
     containerDivName.appendChild(innerDivName)
 
-    const headlineName = document.createElement("h2")
+    headlineName = document.createElement("h2")
+    headlineName.innerHTML = headlineContent
+    innerDivName.appendChild(headlineName)
+
+    listName = document.createElement("ul")
+    innerDivName.appendChild(listName)
+    for (let taco in arrayList) {
+        let li = document.createElement("li")
+        li.innerHTML = arrayList[taco]
+        listName.appendChild(li)
+    }
+
 }
 
 
@@ -140,14 +162,30 @@ const createWitVicDiv = () => {
     }
 }
 
+const crimesContainerDiv = document.createElement("div")
+crimesContainerDiv.className = "crimes-container-div"
+
+const witVicContainerDiv = document.createElement("div")
+witVicContainerDiv.className = "witness-victim-container"
+
+const allegedCrimesList = ["Assualt","Breaking and Entering","Industrial Espionage"]
+const convictionsList = ["Syrup Laundering","Armed Robbery","Grand Theft Auto","Hit and Run","Murder"]
+const witnessList = ["Samantha Vo - Witness to Maple Syrup Laundering","Travers - Witness to Armed Robbery","Siddarth Best - Witness to Hit and Run","Henry Fairclaw - Witness to Murder"]
+const victimList = ["Izacc Robertson - Victim of Breaking and Entering","Bobby Curtis - Murdered","Tori Murray - Victim of Grand Theft Auto","Leslie Grieg - Victim of Armed Robbery"]
+
 const buildRapSheet = () => {
     while (mainDiv.firstChild){
         mainDiv.removeChild(mainDiv.firstChild)
     }
-    createCrimesDiv()
+    // createCrimesDiv()
+    // createLocationsDiv()
+    // createWitVicDiv()
+    
+    buildDivAndList(crimesContainerDiv, "alleged-crimes-div", "allegedCrimesHeadline", "Alleged Crimes:", allegedCrimesList, "allegedCrimesUL")
+    buildDivAndList(crimesContainerDiv, "convictions-div", "convictionsHeadline", "Convicted Crimes:", convictionsList, "convictionsUL")
     createLocationsDiv()
-    createWitVicDiv()
-    // pageHead.appendChild(styleLink)
+    buildDivAndList(witVicContainerDiv, "witness-div", "witnessHeadline", "Witnesses To Crimes:", witnessList, "witnessUL")
+    buildDivAndList(witVicContainerDiv, "victims-div", "victimsHeadline", "Victims Of Crimes:", victimList, "victimUL")
     mainDiv.appendChild(mainFragment)
 }
 
