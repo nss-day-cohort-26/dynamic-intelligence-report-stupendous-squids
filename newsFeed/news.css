@@ -67,7 +67,7 @@
   } */
 
   .news-collapsible {
-    background-color: #777;
+    background-color: black;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -75,7 +75,7 @@
     border: none;
     text-align: center;
     outline: none;
-    font-size: 15px;
+    font-size: 1.2em;
 }
 
 .active, .news-collapsible:hover {
@@ -100,7 +100,7 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
 }
 /* new stuff ************************************/
@@ -135,13 +135,12 @@
   font-family: 'Droid Serif', serif;
   font-size: 14px;
   color: #2f2f2f;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
 
 }
 
-p{
-  margin-top: 0;
-  margin-bottom: 20px;
-}
+
 
 .head{
   text-align: center;
@@ -274,4 +273,58 @@ font-size: 12px;
       overflow: hidden;
   }
 
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 9vw;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.fluxbut {
+  font-family: neon;
+  color: rgb(238, 0, 0);
+  text-shadow: 0 0 2vw rgb(110, 0, 0);
+  font-size: 2vw;
+  line-height: 2vw;
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+.fluxbut {
+  animation: fluxbut 2.4s linear infinite;
+  -moz-animation: fluxbut 2.4s linear infinite;
+  -webkit-animation: fluxbut 2.4s linear infinite;
+  -o-animation: fluxbut 2.4s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
+@keyframes fluxbut {
+  0%,
+  100% {
+    /* text-shadow: 0 0 1vw rgb(255, 16, 16), 0 0 3vw rgb(255, 16, 16), 0 0 10vw rgb(255, 16, 16), 0 0 10vw rgb(255, 16, 16), 0 0 .4vw rgb(252, 132, 206), .5vw .5vw .1vw rgb(255, 33, 206); */
+    color: rgb(254, 40, 208);
+  }
+  50% {
+    /* text-shadow: 0 0 .5vw #5f0404, 0 0 1.5vw #5f0404, 0 0 5vw #5f0404, 0 0 5vw #5f0404, 0 0 .2vw #5f0404, .5vw .5vw .1vw #410202; */
+    color: rgb(188, 0, 0);
+  }
 }
