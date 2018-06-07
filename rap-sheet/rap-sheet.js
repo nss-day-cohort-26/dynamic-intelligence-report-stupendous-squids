@@ -75,6 +75,7 @@ const buildRapSheet = () => {
     while (mainDiv.firstChild){
         mainDiv.removeChild(mainDiv.firstChild)
     }
+    
     const crimesContainerDiv = document.createElement("div")
     crimesContainerDiv.className = "crimes-container-div"
 
