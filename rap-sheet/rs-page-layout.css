@@ -8,6 +8,7 @@
   border: 3px solid rgb(0, 0, 0);
   padding: 10px;
   background: rgba(161, 153, 160, .8);
+  width: 65%;
 }
 
 .shadow-box ul > li {
@@ -47,10 +48,14 @@
   padding-bottom: 40px;
   width: 40%;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .locations-container-div div{
   margin: 40px;
+  overflow: scroll;
 }
 
 .locations-container-div div > li {

@@ -1,60 +1,24 @@
 const mainDiv = document.getElementById("whole-page")
-// const pageHead = document.querySelector("head")
-// const styleLink = document.createElement("link")
-// styleLink.setAttribute("href", "rap-sheet/rs-page-layout.css")
-// styleLink.setAttribute("rel", "stylesheet")
 const mainFragment = document.createDocumentFragment()
 
-const buildDivAndList = (containerDivName, containerClassName, innerDivName, headlineName, arrayList, listName) => {
-    const containerDivName = document.createElement("div")
-    containerDivName.className = containerClassName
+const buildDivAndList = (containerDivName, innerDivName, headlineName, headlineContent, arrayList, listName) => {
     mainFragment.appendChild(containerDivName)
 
-    const innerDivName = document.createElement("div")
+    innerDivName = document.createElement("div")
     containerDivName.appendChild(innerDivName)
 
-    const headlineName = document.createElement("h2")
-}
+    headlineName = document.createElement("h2")
+    headlineName.innerHTML = headlineContent
+    innerDivName.appendChild(headlineName)
 
-
-const createCrimesDiv = () => {
-    const crimesContainerDiv = document.createElement("div")
-    crimesContainerDiv.className = "crimes-container-div"
-    mainFragment.appendChild(crimesContainerDiv)
-
-    const allegedCrimesDiv = document.createElement("div")
-    crimesContainerDiv.appendChild(allegedCrimesDiv)
-    
-    const allegedCrimesHeadline = document.createElement("h2")
-    allegedCrimesHeadline.innerHTML = "Alleged Crimes"
-    allegedCrimesDiv.appendChild(allegedCrimesHeadline)
-
-    const allegedCrimesList = ["Assualt","Breaking and Entering","Industrial Espionage"]
-    const allegedCrimesUL = document.createElement("ul")
-    allegedCrimesDiv.appendChild(allegedCrimesUL)
-    for (let crime in allegedCrimesList) {
+    listName = document.createElement("ul")
+    innerDivName.appendChild(listName)
+    for (let taco in arrayList) {
         let li = document.createElement("li")
-        li.innerHTML = allegedCrimesList[crime]
-        allegedCrimesUL.appendChild(li)
+        li.innerHTML = arrayList[taco]
+        listName.appendChild(li)
     }
 
-    const convictionsDiv = document.createElement("div")
-    crimesContainerDiv.appendChild(convictionsDiv)
-    
-    const convictionsHeadline = document.createElement("h2")
-    convictionsHeadline.innerHTML = "Convictions"
-    convictionsDiv.appendChild(convictionsHeadline)
-
-    const convictionsList = ["Syrup Laundering","Armed Robbery","Grand Theft Auto","Hit and Run","Murder"]
-    const convictionsUL = document.createElement("ul")
-    convictionsDiv.appendChild(convictionsUL)
-    for (let crime in convictionsList) {
-        let li = document.createElement("li")
-        li.innerHTML = convictionsList[crime]
-        convictionsUL.appendChild(li)
-    }
-
-    mainFragment.appendChild(crimesContainerDiv)
 }
 
 const createLocationsDiv = () => {
@@ -102,52 +66,26 @@ const createLocationsDiv = () => {
 
 }
 
-const createWitVicDiv = () => {
-    const witVicContainerDiv = document.createElement("div")
-    witVicContainerDiv.className = "witness-victim-container"
-    mainFragment.appendChild(witVicContainerDiv)
+const crimesContainerDiv = document.createElement("div")
+crimesContainerDiv.className = "crimes-container-div"
 
-    const witnessDiv = document.createElement("div")
-    witVicContainerDiv.appendChild(witnessDiv)
-    
-    const witnessHeadline = document.createElement("h2")
-    witnessHeadline.innerHTML = "Witnesses To Crimes"
-    witnessDiv.appendChild(witnessHeadline)
+const witVicContainerDiv = document.createElement("div")
+witVicContainerDiv.className = "witness-victim-container"
 
-    const witnessList = ["Samantha Vo - Witness to Maple Syrup Laundering","Travers - Witness to Armed Robbery","Siddarth Best - Witness to Hit and Run","Henry Fairclaw - Witness to Murder"]
-    const witnessUL = document.createElement("ul")
-    witnessDiv.appendChild(witnessUL)
-    for (let crime in witnessList) {
-        let li = document.createElement("li")
-        li.innerHTML = witnessList[crime]
-        witnessUL.appendChild(li)
-    }
-
-    const victimDiv = document.createElement("div")
-    witVicContainerDiv.appendChild(victimDiv)
-    
-    const victimHeadline = document.createElement("h2")
-    victimHeadline.innerHTML = "Witnesses To Crimes"
-    victimDiv.appendChild(victimHeadline)
-
-    const victimList = ["Izacc Robertson - Victim of Breaking and Entering","Bobby Curtis - Murdered","Tori Murray - Victim of Grand Theft Auto","Leslie Grieg - Victim of Armed Robbery"]
-    const victimeUL = document.createElement("ul")
-    victimDiv.appendChild(victimeUL)
-    for (let crime in victimList) {
-        let li = document.createElement("li")
-        li.innerHTML = victimList[crime]
-        victimeUL.appendChild(li)
-    }
-}
+const allegedCrimesList = ["Assualt","Breaking and Entering","Industrial Espionage"]
+const convictionsList = ["Syrup Laundering","Armed Robbery","Grand Theft Auto","Hit and Run","Murder"]
+const witnessList = ["Samantha Vo - Witness to Maple Syrup Laundering","Travers - Witness to Armed Robbery","Siddarth Best - Witness to Hit and Run","Henry Fairclaw - Witness to Murder"]
+const victimList = ["Izacc Robertson - Victim of Breaking and Entering","Bobby Curtis - Murdered","Tori Murray - Victim of Grand Theft Auto","Leslie Grieg - Victim of Armed Robbery"]
 
 const buildRapSheet = () => {
     while (mainDiv.firstChild){
         mainDiv.removeChild(mainDiv.firstChild)
     }
-    createCrimesDiv()
+    buildDivAndList(crimesContainerDiv, "alleged-crimes-div", "allegedCrimesHeadline", "Alleged Crimes:", allegedCrimesList, "allegedCrimesUL")
+    buildDivAndList(crimesContainerDiv, "convictions-div", "convictionsHeadline", "Convicted Crimes:", convictionsList, "convictionsUL")
     createLocationsDiv()
-    createWitVicDiv()
-    // pageHead.appendChild(styleLink)
+    buildDivAndList(witVicContainerDiv, "witness-div", "witnessHeadline", "Witnesses To Crimes:", witnessList, "witnessUL")
+    buildDivAndList(witVicContainerDiv, "victims-div", "victimsHeadline", "Victims Of Crimes:", victimList, "victimUL")
     mainDiv.appendChild(mainFragment)
 }
 
