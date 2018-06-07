@@ -4,7 +4,6 @@ const centralFragment = document.createDocumentFragment()
 const executiveDiv = document.createElement("div")
 executiveDiv.setAttribute("id", "executiveReport")
 executiveDiv.setAttribute("class", "tabcontent")
-centralFragment.appendChild(executiveDiv)
 
 const createSummaryDiv = () => {
     const summaryContainerDiv = document.createElement("div")
@@ -100,18 +99,14 @@ const createPlaceDiv = () => {
     executiveDiv.appendChild(placeContainerDiv)
 }
 
-
-
-// centralDiv.appendChild(centralFragment)
-
 const buildExecSum = () => {
-    while (centralDiv.firstChild){
-        centralDiv.removeChild(centralDiv.firstChild)
-    }
+    centralDiv.innerHTML = ""
+    executiveDiv.innerHTML = ""
     createSummaryDiv()
     createAliasesDiv()
     createAssociatesDiv()
     createPlaceDiv()
+    centralFragment.appendChild(executiveDiv)
     centralDiv.appendChild(centralFragment)
 }
 

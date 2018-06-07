@@ -82,12 +82,6 @@ const createLocationsDiv = () => {
         locationsUL.childNodes[i].appendChild(locationsLink).appendChild(locationsPic)
         locationsUL.childNodes[i].appendChild(locationsNestedUL).appendChild(locationsNestedLI1)
         locationsUL.childNodes[i].appendChild(locationsNestedUL).appendChild(locationsNestedLI2)
-
-    //     for (let i=0; i<convictionsArray.length; i++) {
-    //         const locationsNestedLI = document.createElement("li")
-    //         locationsNestedLI.innerHTML = convictionsArray[i]
-    //         locationsUL.childNodes[i].lastChild.appendChild(locationsNestedLI)
-    //     }
     }
 
 }

@@ -11,7 +11,13 @@
 
 /*----------------############# ID Selectors ----------------#############*/
 
-#crimes-container {
+#whole-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crimes-container-div {
   width: 70%;
   display: flex;
   flex-direction: row;
@@ -22,31 +28,31 @@
   padding-bottom: 40px;
 }
 
-#crimes-container div > ul {
+.crimes-container-div div > ul {
   margin: 20px;
 }
 
-#crimes-container ul > li {
+.crimes-container-div ul > li {
   padding: 10px;
 }
 
-#locations-container {
+.locations-container-div {
   border-bottom: 3px dashed black;
   padding-bottom: 40px;
   width: 70%;
   padding-bottom: 40px;
 }
 
-#locations-container div{
+.locations-container-div div{
   margin: 40px;
 }
 
-#locations-container div > li {
+.locations-container-div div > li {
   padding-bottom: 20px;
   list-style: none;
 }
 
-#locations-container div > li > ul > li {
+.locations-container-div div > li > ul > li {
   list-style: inside;   
 }
 
