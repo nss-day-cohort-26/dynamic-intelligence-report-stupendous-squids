@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     background-color: #B5BBBA;
+    margin-top: 80px;
 }
 
 nav ul {
@@ -21,7 +22,7 @@ nav ul {
 
 
 nav ul li {
-    background-color: rgba(107, 95, 99, .5);
+    background-color: rgba(107, 95, 99);
     display: inline-block;
     padding: 10px;
     margin: 0;
@@ -33,7 +34,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: rgba(127, 129, 126, .5);
+    background-color: rgba(127, 129, 126);
 }
 
 nav ul li a {

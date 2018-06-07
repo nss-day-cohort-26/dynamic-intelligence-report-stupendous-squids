@@ -8,3 +8,4 @@ rapSheetBtn.addEventListener("click", buildRapSheet)
 newsFeedBtn.addEventListener("click", buildNewsFeed)
 finIntBtn.addEventListener("click", buildFinInt)
 
+buildExecSum()
