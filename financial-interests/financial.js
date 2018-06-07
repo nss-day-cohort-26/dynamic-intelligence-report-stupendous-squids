@@ -1,11 +1,13 @@
 const firstDiv = document.getElementById("whole-page")
 const myFragment = document.createDocumentFragment()
 
+// main financials div
 const financialsDiv = () => {
 const financialsContainerDiv = document.createElement("div")
 financialsContainerDiv.className = "financials-div"
 myFragment.appendChild(financialsContainerDiv)
 
+// bank accounts list
 const bankAccountsDiv = document.createElement("div")
 financialsContainerDiv.appendChild(bankAccountsDiv)
 
@@ -23,7 +25,7 @@ for (let banks in bankAccountList) {
     bankAccountsListUl.appendChild(li)
 }
 
-
+// businesses list
 const businessesDiv = document.createElement("div")
 financialsContainerDiv.appendChild(businessesDiv)
 
@@ -41,6 +43,7 @@ for (let businesses in businessesList) {
     businessesListUl.appendChild(li)
 }
 
+// officials blackmailed list
 const officialsBlackmailedDiv = document.createElement("div")
 financialsContainerDiv.appendChild(officialsBlackmailedDiv)
 
@@ -58,6 +61,7 @@ for (let officials in officialsBlackmailedList) {
     officialsBlackmailedListUl.appendChild(li)
 }
 
+// money-laundering businesses list
 const moneyLaunderingDiv = document.createElement("div")
 financialsContainerDiv.appendChild(moneyLaunderingDiv)
 
@@ -74,8 +78,6 @@ for (let moneyLaundering in moneyLaunderingList) {
     li.innerHTML = moneyLaunderingList[moneyLaundering]
     moneyLaunderingListUl.appendChild(li)
 }
-
-
 
 
 
