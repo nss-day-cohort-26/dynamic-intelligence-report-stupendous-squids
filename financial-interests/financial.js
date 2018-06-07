@@ -4,7 +4,7 @@ const myFragment = document.createDocumentFragment()
 // main financials div
 const financialsDiv = () => {
 const financialsContainerDiv = document.createElement("div")
-financialsContainerDiv.className = "financials-div"
+financialsContainerDiv.className = "financials-container-div"
 myFragment.appendChild(financialsContainerDiv)
 
 // bank accounts list
@@ -51,7 +51,7 @@ const officialsBlackmailedHeadline = document.createElement("h2")
 officialsBlackmailedHeadline.innerHTML = "Officials Blackmailed"
 officialsBlackmailedDiv.appendChild(officialsBlackmailedHeadline)
 
-const officialsBlackmailedList = ["Alan Wayne", "Theodore Cobblepot", "Edward Elliot", "Harvey Dent"]
+const officialsBlackmailedList = ["Harvey Dent", "Theodore Cobblepot", "Edward Elliot", "Alan Wayne"]
 const officialsBlackmailedListUl = document.createElement("ul")
 officialsBlackmailedDiv.appendChild(officialsBlackmailedListUl)
 
@@ -69,7 +69,7 @@ const moneyLaunderingHeadline = document.createElement("h2")
 moneyLaunderingHeadline.innerHTML = "Money-Laundering Businesses"
 moneyLaunderingDiv.appendChild(moneyLaunderingHeadline)
 
-const moneyLaunderingList = ["Red Hood Spirts", "Gotham City Auto", "Soloman Real Estate", "Black Glove Nightclub"]
+const moneyLaunderingList = ["Red Hood Spirts", "Gotham City Auto", "Soloman Real Estate", "Maple Syrup Brokering"]
 const moneyLaunderingListUl = document.createElement("ul")
 moneyLaunderingDiv.appendChild(moneyLaunderingListUl)
 
