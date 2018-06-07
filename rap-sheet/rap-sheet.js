@@ -66,12 +66,6 @@ const createLocationsDiv = () => {
 
 }
 
-const crimesContainerDiv = document.createElement("div")
-crimesContainerDiv.className = "crimes-container-div"
-
-const witVicContainerDiv = document.createElement("div")
-witVicContainerDiv.className = "witness-victim-container"
-
 const allegedCrimesList = ["Assualt","Breaking and Entering","Industrial Espionage"]
 const convictionsList = ["Syrup Laundering","Armed Robbery","Grand Theft Auto","Hit and Run","Murder"]
 const witnessList = ["Samantha Vo - Witness to Maple Syrup Laundering","Travers - Witness to Armed Robbery","Siddarth Best - Witness to Hit and Run","Henry Fairclaw - Witness to Murder"]
@@ -81,6 +75,12 @@ const buildRapSheet = () => {
     while (mainDiv.firstChild){
         mainDiv.removeChild(mainDiv.firstChild)
     }
+    const crimesContainerDiv = document.createElement("div")
+    crimesContainerDiv.className = "crimes-container-div"
+
+    const witVicContainerDiv = document.createElement("div")
+    witVicContainerDiv.className = "witness-victim-container"
+    
     buildDivAndList(crimesContainerDiv, "alleged-crimes-div", "allegedCrimesHeadline", "Alleged Crimes:", allegedCrimesList, "allegedCrimesUL")
     buildDivAndList(crimesContainerDiv, "convictions-div", "convictionsHeadline", "Convicted Crimes:", convictionsList, "convictionsUL")
     createLocationsDiv()
