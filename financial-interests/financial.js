@@ -7,6 +7,7 @@ const financialsContainerDiv = document.createElement("div")
 financialsContainerDiv.className = "financials-container-div"
 myFragment.appendChild(financialsContainerDiv)
 
+
 // bank accounts list
 const bankAccountsDiv = document.createElement("div")
 financialsContainerDiv.appendChild(bankAccountsDiv)
