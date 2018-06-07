@@ -38,7 +38,7 @@ nav ul {
 
 
 nav ul li {
-    background-color: rgba(107, 95, 99, 0.7);
+    background-color: rgba(107, 95, 99, .85);
     display: inline-block;
     padding: 10px;
     margin: 0;
@@ -67,5 +67,10 @@ nav ul li a {
 @media (max-width: 967px){
     nav ul li {
         font-size: .9em;
+    }
+}
+@media (max-width: 600px){
+    nav ul li {
+        font-size: .6em;
     }
 }
