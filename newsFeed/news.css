@@ -100,6 +100,8 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
+    font-size: 2em;
+    text-align: center;
 }
 /* new stuff ************************************/
 
@@ -151,7 +153,7 @@ p{
   line-height: 0;
   word-spacing: -.31em;
   display: inline-block;
-  margin: 30px 2% 0 2%;
+  /* margin: 30px 2% 0 2%; */
   width: 100%;
   box-shadow: -5px -5px 20px black;
   /* padding: 0 18px; */
