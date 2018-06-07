@@ -13,12 +13,14 @@ function buildNewsFeed() {
 
   const newsHead = document.createElement('h2')
   newsHead.setAttribute('id', 'news-head')
+  newsHead.setAttribute('class', 'flux')
   newsHead.textContent = 'NEWS FEED'
   newsDiv.appendChild(newsHead)
 
   // Create News Buttons
   const btnOne = document.createElement('button')
   btnOne.setAttribute('class', 'news-collapsible')
+  btnOne.classList.add('fluxbut')
   btnOne.textContent = "If Joker Is So Terrible, Why Don't Statistics Show It?"
   newsDiv.appendChild(btnOne)
   // Create content for button one and append
@@ -131,6 +133,7 @@ function buildNewsFeed() {
 
   const btnTwo = document.createElement('button')
   btnTwo.setAttribute('class', 'news-collapsible')
+  btnTwo.classList.add('fluxbut')
   btnTwo.textContent = 'What Is The Joker and How Does It Work?'
   newsDiv.appendChild(btnTwo)
   // Create content for button two and append
@@ -144,6 +147,7 @@ function buildNewsFeed() {
 
   const btnThree = document.createElement('button')
   btnThree.setAttribute('class', 'news-collapsible')
+  btnThree.classList.add('fluxbut')
   btnThree.textContent = 'What Can You Do About The Joker Right Now'
   newsDiv.appendChild(btnThree)
   // Create content for button three and append
@@ -157,6 +161,7 @@ function buildNewsFeed() {
 
   const btnFour = document.createElement('button')
   btnFour.setAttribute('class', 'news-collapsible')
+  btnFour.classList.add('fluxbut')
   btnFour.textContent = 'Four simple ways to clean unsightly blood stains.'
   newsDiv.appendChild(btnFour)
   // Create content for button four and append
