@@ -1,0 +1,19 @@
+/* #executiveReport {
+    text-align: center;
+} */
+
+.summary-container-div {
+    text-align: center;
+}
+
+.aliases-container-div {
+    border: solid;
+}
+
+
+.image {
+    border: 5px solid rgb(226, 17, 17);
+    border-radius: 4px;
+    padding: 5px;
+    
+}
