@@ -1,0 +1,25 @@
+.financials-container-div div {
+    border: 3px solid white;
+    padding-left: 40px;
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    padding-top: 15px;
+}
+
+.financials-container-div h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.financials-container-div ul {
+    line-height: 35px;
+}
+
+
+
+
+
+
+
+

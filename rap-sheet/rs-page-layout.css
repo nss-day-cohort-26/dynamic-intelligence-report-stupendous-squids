@@ -8,6 +8,7 @@
   border: 3px solid rgb(0, 0, 0);
   padding: 10px;
   background: rgba(161, 153, 160, .8);
+  width: 65%;
 }
 
 .shadow-box ul > li {
@@ -45,12 +46,16 @@
 .locations-container-div {
   /* border-bottom: 3px solid #B5BBBA; */
   padding-bottom: 40px;
-  width: 40%;
+  /* width: 33%; */
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .locations-container-div div{
   margin: 40px;
+  overflow: auto;
 }
 
 .locations-container-div div > li {
@@ -84,4 +89,46 @@
 
 .witness-victim-container ul > li {
   padding: 10px;
+}
+
+@media (min-width: 1027px){
+  .locations-container-div h2 {
+    overflow-wrap: normal;
+  }
+}
+
+@media (max-width: 1025px){
+  .crimes-container-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 75px;
+    margin-top: 40px;
+    border-bottom: 3px solid #B5BBBA;
+    padding-bottom: 40px;
+  }
+
+  .locations-container-div {
+    padding-bottom: 40px;
+    width: 80%;
+    padding-bottom: 20px;
+    overflow: scroll;
+    width: 100vw;
+  }
+
+  .witness-victim-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+    margin-top: 40px;
+    border-top: 3px solid #B5BBBA;
+  }
+
+  .locations-container-div h2 {
+    overflow-wrap: normal;
+  }
+  
 }
