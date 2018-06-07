@@ -1,5 +1,10 @@
 const mainDiv = document.getElementById("whole-page")
+const pageHead = document.querySelector("head")
+const styleLink = document.createElement("link")
+styleLink.setAttribute("href", "rap-sheet/rs-page-layout.css")
+styleLink.setAttribute("rel", "stylesheet")
 const mainFragment = document.createDocumentFragment()
+
 
 const createCrimesDiv = () => {
     const crimesContainerDiv = document.createElement("div")
@@ -13,7 +18,7 @@ const createCrimesDiv = () => {
     allegedCrimesHeadline.innerHTML = "Alleged Crimes"
     allegedCrimesDiv.appendChild(allegedCrimesHeadline)
 
-    const allegedCrimesList = ["assualt","breaking and entering","industrial espionage"]
+    const allegedCrimesList = ["Assualt","Breaking and Entering","Industrial Espionage"]
     const allegedCrimesUL = document.createElement("ul")
     allegedCrimesDiv.appendChild(allegedCrimesUL)
     for (let crime in allegedCrimesList) {
@@ -114,7 +119,7 @@ const createWitVicDiv = () => {
     victimHeadline.innerHTML = "Witnesses To Crimes"
     victimDiv.appendChild(victimHeadline)
 
-    const victimList = ["Samantha Vo - Witness to Maple Syrup Laundering","Travers - Witness to Armed Robbery","Siddarth Best - Witness to Hit and Run","Henry Fairclaw - Witness to Murder"]
+    const victimList = ["Izacc Robertson - Victim of Breaking and Entering","Bobby Curtis - Murdered","Tori Murray - Victim of Grand Theft Auto","Leslie Grieg - Victim of Armed Robbery"]
     const victimeUL = document.createElement("ul")
     victimDiv.appendChild(victimeUL)
     for (let crime in victimList) {
@@ -131,6 +136,7 @@ const buildRapSheet = () => {
     createCrimesDiv()
     createLocationsDiv()
     createWitVicDiv()
+    pageHead.appendChild(styleLink)
     mainDiv.appendChild(mainFragment)
 }
 

@@ -1,19 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
 /*----------------############# Class Selectors ----------------#############*/
 .shadow-box {
-  box-shadow: 5px 5px 4px grey;
-  border: 1.5px solid grey;
+  box-shadow: 5px 5px 6px rgb(34, 31, 31);
+  border: 3px solid rgb(0, 0, 0);
   padding: 10px;
+  background: rgba(161, 153, 160, .8);
 }
 
 .shadow-box ul > li {
   list-style: inside;
 }
-
 /*----------------############# ID Selectors ----------------#############*/
 
 #whole-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -22,9 +27,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
   margin-top: 40px;
-  border-bottom: 3px dashed black;
+  border-bottom: 3px solid #B5BBBA;
   padding-bottom: 40px;
 }
 
@@ -33,14 +38,15 @@
 }
 
 .crimes-container-div ul > li {
+  font-style: bold;
   padding: 10px;
 }
 
 .locations-container-div {
-  border-bottom: 3px dashed black;
+  /* border-bottom: 3px solid #B5BBBA; */
   padding-bottom: 40px;
-  width: 70%;
-  padding-bottom: 40px;
+  width: 40%;
+  padding-bottom: 20px;
 }
 
 .locations-container-div div{
@@ -52,23 +58,30 @@
   list-style: none;
 }
 
+.locations-container-div img {
+  border: 7px solid black;
+  margin-bottom: 30px;
+}
+
 .locations-container-div div > li > ul > li {
   list-style: inside;   
 }
 
-#witness-victim-container {
-  width: 90%;
+.witness-victim-container {
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 100px;
   margin-top: 40px;
+  border-top: 3px solid #B5BBBA;
+
 }
 
-#witness-victim-container div > ul {
+.witness-victim-container div > ul {
   margin: 20px
 }
 
-#witness-victim-container ul > li {
+.witness-victim-container ul > li {
   padding: 10px;
 }
