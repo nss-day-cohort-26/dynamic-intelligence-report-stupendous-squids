@@ -1,7 +1,24 @@
 body {
     margin: 0px;
-    background-color: #B5BBBA;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ),
+        url(background.jpg);
     margin-top: 80px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 4em;
+}
+h2 {
+    font-size: 3em;
+}
+h3 {
+    font-size: 2em;
 }
 
 nav ul {
