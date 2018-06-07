@@ -18,6 +18,7 @@ const createSummaryDiv = () => {
     summaryDiv.appendChild(summaryHeadline)
 
     const img = document.createElement("img");
+    img.className = "image"
     img.src = "https://upload.wikimedia.org/wikipedia/en/9/98/Joker_%28DC_Comics_character%29.jpg";
     summaryDiv.appendChild(img);
 
