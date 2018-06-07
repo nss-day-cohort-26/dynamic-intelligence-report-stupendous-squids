@@ -9,7 +9,6 @@ nav ul {
     flex-direction: row;
     justify-content: left;
     list-style-type: none;
-    width: 100%;
     -webkit-margin-before: 0px;
     -webkit-margin-after: 0px;
     -webkit-margin-start: 0px;
@@ -22,7 +21,7 @@ nav ul {
 
 
 nav ul li {
-    background-color: rgba(107, 95, 99);
+    background-color: rgba(107, 95, 99, 0.7);
     display: inline-block;
     padding: 10px;
     margin: 0;
