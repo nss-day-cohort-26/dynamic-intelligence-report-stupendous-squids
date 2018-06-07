@@ -1,9 +1,20 @@
 const mainDiv = document.getElementById("whole-page")
-const pageHead = document.querySelector("head")
-const styleLink = document.createElement("link")
-styleLink.setAttribute("href", "rap-sheet/rs-page-layout.css")
-styleLink.setAttribute("rel", "stylesheet")
+// const pageHead = document.querySelector("head")
+// const styleLink = document.createElement("link")
+// styleLink.setAttribute("href", "rap-sheet/rs-page-layout.css")
+// styleLink.setAttribute("rel", "stylesheet")
 const mainFragment = document.createDocumentFragment()
+
+const buildDivAndList = (containerDivName, containerClassName, innerDivName, headlineName, arrayList, listName) => {
+    const containerDivName = document.createElement("div")
+    containerDivName.className = containerClassName
+    mainFragment.appendChild(containerDivName)
+
+    const innerDivName = document.createElement("div")
+    containerDivName.appendChild(innerDivName)
+
+    const headlineName = document.createElement("h2")
+}
 
 
 const createCrimesDiv = () => {
@@ -136,7 +147,7 @@ const buildRapSheet = () => {
     createCrimesDiv()
     createLocationsDiv()
     createWitVicDiv()
-    pageHead.appendChild(styleLink)
+    // pageHead.appendChild(styleLink)
     mainDiv.appendChild(mainFragment)
 }
 

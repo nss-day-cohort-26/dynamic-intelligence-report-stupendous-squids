@@ -85,3 +85,40 @@
 .witness-victim-container ul > li {
   padding: 10px;
 }
+
+@media (min-width: 1027px){
+  .locations-container-div {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1025px){
+  .crimes-container-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 75px;
+    margin-top: 40px;
+    border-bottom: 3px solid #B5BBBA;
+    padding-bottom: 40px;
+  }
+
+  .locations-container-div {
+    /* border-bottom: 3px solid #B5BBBA; */
+    padding-bottom: 40px;
+    width: 80%;
+    padding-bottom: 20px;
+    overflow: scroll;
+  }
+
+  .witness-victim-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+    margin-top: 40px;
+    border-top: 3px solid #B5BBBA;
+  
+}

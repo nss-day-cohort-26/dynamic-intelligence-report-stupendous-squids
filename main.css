@@ -7,7 +7,7 @@ body {
         url(background.jpg);
     margin-top: 80px;
     color: white;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Inconsolata', monospace;
     font-size: 20px;
 }
 
@@ -43,7 +43,7 @@ nav ul li {
     display: inline-block;
     padding: 10px;
     margin: 0;
-    transition: background-color 0.1s;
+    transition: background-color 0.3s;
     height: 60px;
     width: 25%;
     text-align: center;
@@ -58,4 +58,15 @@ nav ul li a {
     text-decoration: none;
     color: white;
     text-shadow: 3px 3px 5px black;
+}
+
+@media (max-width: 1184px){
+    nav ul li {
+       font-size: 1.2em;
+    }
+}
+@media (max-width: 967px){
+    nav ul li {
+        font-size: .9em;
+    }
 }
